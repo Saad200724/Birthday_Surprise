@@ -27,7 +27,7 @@ export default function GiftBox({ onClick }: GiftBoxProps) {
     >
       <div className="relative">
         <motion.div
-          className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 animate-color-wave rounded-2xl shadow-2xl animate-pulse-glow"
+          className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-pink-500 to-yellow-400 rounded-2xl shadow-2xl animate-pulse-glow"
           animate={{
             boxShadow: [
               "0 0 20px rgba(244, 114, 182, 0.5)",

@@ -41,13 +41,17 @@ export default function SecretWishModal({ isOpen, onClose, onCarAnimation }: Sec
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                <p className="font-caveat text-base sm:text-lg leading-relaxed px-2">
-                  "On this special day, I wish for you to have all the adventures your heart desires. 
-                  May every road you travel be filled with joy, every dream you chase become reality, 
-                  and every moment be as beautiful as you are. 🌟"
-                </p>
+                <div className="font-caveat text-sm sm:text-base leading-relaxed px-2 space-y-2">
+                  <p>Happy Birthday, amar best bandhubi</p>
+                  <p>Ajker din ta hok tor jibon er shobcheye special.</p>
+                  <p>Tui jemon ekjon shotti friend, emon friend paoa shotti lucky feel kori.</p>
+                  <p>Tor sathe je shob moment gulo share korechi — hasci, adda, jhamela — sob ekta ekta memory hoye roye gese. 😄</p>
+                  <p>Tui ja chai, ja shopno dekhos, sob kisui jeno puron hoy.</p>
+                  <p>Always stay happy, confident, ar tor motoi ekta amazing manus.</p>
+                  <p>Onek onek bhalobasha & treat dibi must! 💖🎉</p>
+                </div>
                 <p className="font-inter text-xs sm:text-sm italic text-gray-500">
-                  - From someone who believes in your dreams
+                  - From your best friend
                 </p>
               </motion.div>
               
@@ -63,8 +67,8 @@ export default function SecretWishModal({ isOpen, onClose, onCarAnimation }: Sec
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <span className="hidden sm:inline">🚗 Take a Ride to Your Dreams</span>
-                  <span className="sm:hidden">🚗 Take a Ride</span>
+                  <span className="hidden sm:inline">🏎️ Take a Ride to Your Dreams</span>
+                  <span className="sm:hidden">🏎️ Take a Ride</span>
                 </motion.button>
                 <motion.button
                   className="w-full bg-gray-100 text-gray-700 font-medium py-2 sm:py-2.5 px-4 sm:px-6 rounded-xl transition-all duration-300 hover:bg-gray-200 text-sm sm:text-base"

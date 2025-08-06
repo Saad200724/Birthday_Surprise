@@ -30,11 +30,10 @@ export default function FinalCelebration({ onRestart }: FinalCelebrationProps) {
       
       <motion.div className="text-center space-y-6 sm:space-y-8 relative z-40 px-4">
         <motion.h1
-          className="font-great-vibes text-3xl sm:text-4xl md:text-5xl lg:text-7xl animate-color-wave"
+          className="font-great-vibes text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white"
           animate={{ 
             scale: [1, 1.05, 1],
-            rotate: [0, 1, -1, 0],
-            filter: ["hue-rotate(0deg)", "hue-rotate(360deg)"]
+            rotate: [0, 1, -1, 0]
           }}
           transition={{ repeat: Infinity, duration: 4 }}
         >

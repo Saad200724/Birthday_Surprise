@@ -54,7 +54,7 @@ export default function Home() {
     setShowSecretModal(true);
   };
 
-  const handleCarAnimation = () => {
+  const handleWishAnimation = () => {
     setShowSecretModal(false);
     // Play firework sound effect
     if (soundEnabled && (window as any).playFireworkSound) {
@@ -148,7 +148,7 @@ export default function Home() {
       <SecretWishModal
         isOpen={showSecretModal}
         onClose={() => setShowSecretModal(false)}
-        onCarAnimation={handleCarAnimation}
+        onCarAnimation={handleWishAnimation}
       />
     </div>
   );

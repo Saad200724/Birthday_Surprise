@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import ConfettiEffect from "./ConfettiEffect";
-import lamborghiniImage from "@assets/image_1754245394281.png";
+import lamborghiniImage from "@assets/f_1754463921903.png";
 
 interface SurpriseRevealProps {
   onSecretWishClick: () => void;
@@ -9,10 +9,10 @@ interface SurpriseRevealProps {
 
 export default function SurpriseReveal({ onSecretWishClick }: SurpriseRevealProps) {
   useEffect(() => {
-    // Play car sound effect on mount
+    // Play car engine sound effect on mount
     const carSound = new Audio();
-    // Note: In real implementation, load actual car sound
-    // carSound.src = "/assets/car-sound.mp3";
+    // Note: In real implementation, load actual car engine sound
+    // carSound.src = "/assets/car-engine-sound.mp3";
     carSound.play().catch(console.log);
   }, []);
 
@@ -25,20 +25,21 @@ export default function SurpriseReveal({ onSecretWishClick }: SurpriseRevealProp
     >
       <ConfettiEffect />
 
-      {/* Lamborghini image - enters from left to center */}
-      <motion.img
-        src={lamborghiniImage}
-        alt="Lamborghini"
-        className="absolute top-10 md:top-20 left-1/2 transform -translate-x-1/2 w-64 h-auto sm:w-80 md:w-96 lg:w-[500px] xl:w-[600px] object-contain pointer-events-none z-25"
-        initial={{ x: "-100vw", opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 2, ease: "easeOut" }}
-      />
-
       {/* Main birthday message */}
-      <motion.div className="text-center space-y-4 md:space-y-6 relative z-20 mt-32 sm:mt-40 md:mt-48 lg:mt-56 px-4">
+      <motion.div className="text-center space-y-3 md:space-y-4 relative z-20 flex flex-col items-center justify-center min-h-screen px-4 -mt-12 md:-mt-16 lg:-mt-20">
+        
+        {/* Lamborghini racing car - perfectly centered above text */}
+        <motion.img
+          src={lamborghiniImage}
+          alt="Lamborghini Racing Car"
+          className="w-64 h-auto xs:w-72 sm:w-80 md:w-[30rem] lg:w-[36rem] xl:w-[40rem] 2xl:w-[48rem] object-contain pointer-events-none mb-1 sm:mb-2 md:mb-3"
+          initial={{ x: "-100vw", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 2, ease: "easeOut" }}
+        />
+
         <motion.h1
-          className="font-great-vibes text-3xl sm:text-4xl md:text-6xl lg:text-8xl text-gradient-birthday birthday-title leading-tight"
+          className="font-great-vibes text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-gradient-birthday birthday-title leading-relaxed px-2 max-w-full break-words"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 1 }}
@@ -47,7 +48,7 @@ export default function SurpriseReveal({ onSecretWishClick }: SurpriseRevealProp
         </motion.h1>
 
         <motion.p
-          className="font-caveat text-lg sm:text-xl md:text-2xl lg:text-3xl text-white px-2"
+          className="font-caveat text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white px-2 max-w-4xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.5, duration: 1 }}
@@ -56,13 +57,13 @@ export default function SurpriseReveal({ onSecretWishClick }: SurpriseRevealProp
         </motion.p>
 
         <motion.div
-          className="space-y-4 mt-6 md:mt-8"
+          className="space-y-4 mt-4 md:mt-6 lg:mt-8"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 3, duration: 0.8 }}
         >
           <motion.button
-            className="animate-color-wave text-slate-900 font-semibold py-3 px-6 md:py-4 md:px-8 rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-2xl font-inter animate-bounce-fun button-mobile text-sm md:text-base"
+            className="bg-gradient-to-r from-pink-500 to-yellow-400 text-slate-900 font-semibold py-3 px-6 md:py-4 md:px-8 rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-2xl font-inter animate-bounce-fun button-mobile text-sm md:text-base"
             onClick={onSecretWishClick}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
